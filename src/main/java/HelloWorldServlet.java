@@ -6,7 +6,7 @@ import java.io.*;
 import javax.servlet.*;
 
 
-@WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello-world")
+@WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
 
     @Override
