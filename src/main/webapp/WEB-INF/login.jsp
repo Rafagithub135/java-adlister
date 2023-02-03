@@ -12,11 +12,11 @@
     <title>Login Page</title>
 </head>
 <body>
-<%@ include file="partials/navbar.jsp" %>
+<%@ include file="/WEB-INF/partials/navbar.jsp" %>
 <h1>Welcome To Our Page.  Please log in below.</h1>
 <br />
 <hr />
-<form action="/login.jsp" method="post">
+<form action="login" method="post">
     <label for="username">Username</label>
     <input type="text" name="username" id="username">
     <label for="password">Password</label>
@@ -26,7 +26,7 @@
 <hr />
 <c:choose>
     <c:when test="${param.username == 'admin' && param.password == 'password'}" >
-    <c:redirect url = "/profile.jsp" />
+    <c:redirect url = "/WEB-INF/profile.jsp" />
     </c:when>
 </c:choose>
 <%! int counter = 1; %>
