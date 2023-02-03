@@ -16,6 +16,6 @@ public class ViewColorServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getSession().invalidate();
-        resp.sendRedirect("/WEB-INF/pickcolor");
+        resp.sendRedirect("/WEB-INF/viewcolor");
     }
 }

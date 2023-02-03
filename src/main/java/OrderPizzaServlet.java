@@ -5,7 +5,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
 @WebServlet(name = "OrderPizzaServlet", urlPatterns = "/pizza-order")
 public class OrderPizzaServlet extends HttpServlet {
     @Override

@@ -11,10 +11,6 @@
     <title>Pick Your Favorite Color</title>
 </head>
 <body>
-<%--A user goes to /pickcolor and sees a page where they are prompted to enter their favorite color (using a text input). Upon clicking submit, they are redirected to /viewcolor and see a page with a background color of the submitted color.
-
-pass the data from one servlet to another by adding the color value in a query string--%>
-
 <form action="color" method="post">
     <input type="text" name="color" id="color" placeholder="Enter your favorite color:">
     <button type="submit" value="Submit"></button>
