@@ -1,4 +1,3 @@
-
 <%--
   Created by IntelliJ IDEA.
   User: ralphmccloskey
@@ -6,14 +5,8 @@
   Time: 2:30 PM
   To change this template use File | Settings | File Templates.
 --%>
-
-<%-- use a POST request on the form
-use one JSP and one servlet
-
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 
 <html>
 <head>
