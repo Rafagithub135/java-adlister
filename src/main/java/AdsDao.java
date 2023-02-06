@@ -12,7 +12,7 @@ public class AdsDao {
 
 // TODO: Move any logic you did on the login page to live inside a servlet instead. Done
 //
-// TODO: Build an index page for all of your ads
+// TODO: Build an index page for all of your ads Done
 //
 // TODO: Create a directory inside webapp named ads. Done
 // TODO: Create a file ads/index.jsp. This file will show a listing of all the ads on your site. Done
