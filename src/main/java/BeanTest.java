@@ -15,7 +15,7 @@ public class BeanTest {
         System.out.println(authors);
         Quotes quotes = new Quotes();
         quotes.setId(1);
-        quotes.setContent("From the point of ignition, to the final drive.  The point of the journey is not to arrive.");
+        quotes.setContent("The knowledge that they fear, is a weapon to be used against them.");
         System.out.println(quotes);
     }
 }
