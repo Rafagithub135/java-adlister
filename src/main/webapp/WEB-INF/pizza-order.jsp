@@ -38,9 +38,9 @@
     </select>
     <br>
     <label>Toppings:</label>
-    <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni"><label for="pepperoni" />Pepperoni</label>
-    <input type="checkbox" id="sausage" name="toppings" value="sausage"><label for="sausage" />Sausage</label>
-    <input type="checkbox" id="ham" name="toppings" value="ham"><label for="ham" />Ham</label>
+    <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni"><label for="pepperoni">Pepperoni</label>
+    <input type="checkbox" id="sausage" name="toppings" value="sausage"><label for="sausage">Sausage</label>
+    <input type="checkbox" id="ham" name="toppings" value="ham"><label for="ham" >Ham</label>
     <input type="checkbox" id="bacon" name="toppings" value="bacon" /><label for="bacon">Bacon</label>
     <input type="checkbox" id="pineapple" name="toppings" value="pineapple" /><label for="pineapple">Pineapple</label>
     <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms" /><label for="mushrooms">Mushrooms</label>
