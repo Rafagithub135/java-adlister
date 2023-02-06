@@ -5,14 +5,13 @@
   Time: 2:30 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Pizza Order</title>
 </head>
 <body>
-<form action="pizza-order" method="post">
+<form action="/pizza-order" method="post">
     <h3>Create your pizza!</h3>
     <label for="crust">Crust:</label>
     <select name="crust" id="crust">
@@ -39,18 +38,18 @@
     </select>
     <br>
     <label>Toppings:</label>
-    <input type="checkbox" name="toppings" value="pepperoni">Pepperoni
-    <input type="checkbox" name="toppings" value="sausage">Sausage
-    <input type="checkbox" name="toppings" value="ham">Ham
-    <input type="checkbox" name="toppings" value="bacon">Bacon
-    <input type="checkbox" name="toppings" value="pineapple">Pineapple
-    <input type="checkbox" name="toppings" value="mushrooms">Mushrooms
-    <input type="checkbox" name="toppings" value="onions">Onions
-    <input type="checkbox" name="toppings" value="olives">Olives
-    <input type="checkbox" name="toppings" value="spinach">Spinach
-    <input type="checkbox" name="toppings" value="artichoke">Artichoke
-    <input type="checkbox" name="toppings" value="jalapenos">Jalapenos
-    <input type="checkbox" name="toppings" value="anchovies">Anchovies
+    <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni"><label for="pepperoni" />Pepperoni</label>
+    <input type="checkbox" id="sausage" name="toppings" value="sausage"><label for="sausage" />Sausage</label>
+    <input type="checkbox" id="ham" name="toppings" value="ham"><label for="ham" />Ham</label>
+    <input type="checkbox" id="bacon" name="toppings" value="bacon" /><label for="bacon">Bacon</label>
+    <input type="checkbox" id="pineapple" name="toppings" value="pineapple" /><label for="pineapple">Pineapple</label>
+    <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms" /><label for="mushrooms">Mushrooms</label>
+    <input type="checkbox" id="onions" name="toppings" value="onions" /><label for="onions">Onions</label>
+    <input type="checkbox" id="olives" name="toppings" value="olives" /><label for="olives">Olives</label>
+    <input type="checkbox" id="spinach" name="toppings" value="spinach" /><label for="spinach">Spinach</label>
+    <input type="checkbox" id="artichoke" name="toppings" value="artichoke" /><label for="artichoke">Artichoke</label>
+    <input type="checkbox" id="jalepenos" name="toppings" value="jalapenos" /><label for="jalepenos">Jalapenos</label>
+    <input type="checkbox" id="anchovies" name="toppings" value="anchovies" /><label for="anchovies">Anchovies</label>
     <br>
     <label for="address">Delivery Address:</label>
     <textarea type="text" name="address" id="address"></textarea>

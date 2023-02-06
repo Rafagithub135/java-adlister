@@ -5,11 +5,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "OrderPizzaServlet", urlPatterns = "/pizza-order")
-public class OrderPizzaServlet extends HttpServlet {
+@WebServlet(name = "PizzaOrderServlet", urlPatterns = "/pizza-order")
+public class PizzaOrderServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("WEB-INF/pizza-order.jsp").forward(req, resp);
+        req.getRequestDispatcher("/pizza-order.jsp").forward(req, resp);
     }
 
     @Override
@@ -17,7 +17,10 @@ public class OrderPizzaServlet extends HttpServlet {
         System.out.println("Crust: " + req.getParameter("crust"));
         System.out.println("Sauce: " + req.getParameter("sauce"));
         System.out.println("Size: " + req.getParameter("size"));
-        System.out.println("Toppings: " + req.getParameter("toppings"));
+        String[] toppings = req.getParameterValues("toppings");
+        for (String topping : toppings) {
+            System.out.println(topping);
+        }
         System.out.println("Address: " + req.getParameter("address"));
     }
 }
