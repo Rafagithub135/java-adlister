@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "ColorServlet", urlPatterns = "/pickcolor")
-
 public class ColorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -16,7 +15,7 @@ public class ColorServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String color = req.getParameter("color");
-        req.getSession().setAttribute("color", color);
-        resp.sendRedirect("/WEB-INF/viewcolor");
+        String url = "/viewcolor?color=" + color;
+        resp.sendRedirect(url);
     }
 }

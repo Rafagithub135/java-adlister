@@ -11,12 +11,11 @@
     <title>Your Favorite Color</title>
     <style>
         body {
-            background-color: <%= request.getParameter("color") %>;
+            background: ${color};
         }
     </style>
 </head>
 <body>
     <h1>Your Favorite Color</h1>
-    <p>Here is your favorite color: <%= request.getParameter("color") %></p>
 </body>
 </html>
