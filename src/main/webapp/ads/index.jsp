@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: ralphmccloskey
@@ -17,5 +18,6 @@
     <h1>${ad.title}</h1>
     <p>${ad.description}</p>
     </div>
+</c:forEach>
 </body>
 </html>

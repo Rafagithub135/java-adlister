@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
             String username = req.getParameter("username");
             String password = req.getParameter("password");
             if (username.equals("admin") && password.equals("password")) {
-                resp.sendRedirect("WEB-INF/profile");
+                resp.sendRedirect("/profile");
             } else {
                 resp.sendRedirect("/login");
             }
