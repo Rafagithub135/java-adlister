@@ -4,13 +4,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet(name = "ShowAdsServlet", urlPatterns = "/ads.show")
+@WebServlet(name = "ShowAdsServlet", urlPatterns = "/ads")
 public class ShowAdsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
             IOException {
-        req.getRequestDispatcher("WEB-INF/ads.show.jsp").forward(req, resp);
+        List<Ad> ads = DaoFactory.getAdsDao().all();
+        req.setAttribute("ads", ads);
+        req.getRequestDispatcher("/WEB-INF/index.jsp").forward(req, resp);
     }
 
     @Override
@@ -18,7 +21,7 @@ public class ShowAdsServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         if (username.equals("admin") && password.equals("password")) {
-            resp.sendRedirect("WEB-INF/ads.show.jsp");
+            resp.sendRedirect("WEB-INF/ads.jsp");
         } else {
             resp.sendRedirect("/login?error");
         }
