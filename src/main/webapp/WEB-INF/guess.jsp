@@ -11,13 +11,12 @@
     <title>Guess The Number 1, 2, or 3</title>
 </head>
 <body>
-<form>
-    <select id="guess">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-    </select>
+<h1>Guess The Number 1, 2, or 3</h1>
+<form action="guess" method="post">
+    <button name="guess" value="1">1</button>
+    <button name="guess" value="2">2</button>
+    <button name="guess" value="3">3</button>
 </form>
-<p class="visually-hidden">number = Math.floor(Math.random(0, 4)</p>
+<%--<p class="visually-hidden">number = Math.floor(Math.random(0, 4)</p>--%>
 </body>
 </html>

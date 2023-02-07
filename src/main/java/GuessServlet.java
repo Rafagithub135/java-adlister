@@ -1,9 +1,11 @@
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@WebServlet(name = "GuessServlet", urlPatterns = "/guess")
 public class GuessServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -12,9 +14,9 @@ public class GuessServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String guess = req.getParameter("guess");
-        String answer = req.getParameter("answer");
-        if (guess.equals(answer)) {
+        int number = Integer.parseInt(req.getParameter("guess"));
+        int answer = (int) Math.floor((Math.random() * 3) + 1);
+        if (number == answer) {
             resp.sendRedirect("/correct");
         } else {
             resp.sendRedirect("/incorrect");

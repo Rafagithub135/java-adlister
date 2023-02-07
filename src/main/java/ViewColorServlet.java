@@ -5,11 +5,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "GuessCorrectServlet", urlPatterns = "/correct")
-public class GuessCorrectServlet extends HttpServlet {
+@WebServlet(name = "ViewColorServlet", urlPatterns = "/viewcolor")
+public class ViewColorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("result", true);
-        req.getRequestDispatcher("/WEB-INF/results.jsp").forward(req, resp);
+        String color = req.getParameter("color");
+        if (color == null) {
+            color = "transparent";
+        }
+        req.setAttribute("color", color);
+        req.getRequestDispatcher("WEB-INF/viewcolor.jsp").forward(req, resp);
     }
 }
